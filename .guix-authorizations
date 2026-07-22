@@ -1,0 +1,6 @@
+;; -*- mode: scheme -*-
+
+(authorizations
+ (version 0)
+ (("EA18 B34E FD42 9D71 B9D5 4D3D CB9A 70FA CE87 C135"
+   (name "nick"))))

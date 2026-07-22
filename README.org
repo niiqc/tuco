@@ -1,0 +1,23 @@
+* Note
+tuco is a personal Guix channel maintained for the sole purpose of packaging software that I need
+immediately and urgently for my personal workflow.
+
+⚠️ Important Note: This channel is mostly temporary. The proper and recommended approach before
+considering using this channel or adding packages here is to open a Pull Request directly to Guix.
+Whenever a package in this repository is mature and viable, the priority will be to submit it
+upstream to official Guix. Only in cases where a package is not viable for inclusion in official
+Guix (or any other community repository) will it be maintained here permanently.
+
+If what you are looking for doesn't fit into official Guix, or if you are searching for other
+community solutions, it's worth checking out these other channels:
+
+1. [[https://gitlab.com/nonguix/nonguix][nonguix]]
+2. [[https://codeberg.org/anemofilia/radix][radix]]
+3. [[https://https://github.com/rakino/Rosenthal][rosenthal]]
+4. [[https://codeberg.org/look/saayix][saayix]]
+5. [[https://codeberg.org/niqc/tuco-nonfree][tuco-nonfree]]
+
+If you still haven't found what you need, you can search using these package search engines:
+
+- https://search.guix.moe
+- https://toys.whereis.social/
