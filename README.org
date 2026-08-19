@@ -45,7 +45,7 @@ community solutions, it's worth checking out these other channels:
 
 1. [[https://gitlab.com/nonguix/nonguix][nonguix]]
 2. [[https://codeberg.org/anemofilia/radix][radix]]
-3. [[https://https://github.com/rakino/Rosenthal][rosenthal]]
+3. [[https://github.com/rakino/Rosenthal][rosenthal]]
 4. [[https://codeberg.org/look/saayix][saayix]]
 5. [[https://codeberg.org/niqc/tuco-nonfree][tuco-nonfree]]
 
