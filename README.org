@@ -1,3 +1,35 @@
+#+title: tuco
+
+#+begin_export html
+<div align="center">
+    <!-- License -->
+    <a href="https://codeberg.org/niqc/tuco/raw/branch/main/LICENSE"><img alt="license" src="https://img.shields.io/badge/License-AGPL_V3-blue.svg?style=for-the-badge"/></a>
+
+    <!-- Issues -->
+    <a href="https://codeberg.org/niqc/tuco/issues"> <img alt="issues" src="https://img.shields.io/badge/dynamic/json?url=https://codeberg.org/api/v1/repos/niqc/org-dynamic-templates&query=$.open_issues_count&suffix=open&style=for-the-badge&label=issues"/></a>
+
+    <hr>
+
+    <img src="tuco.png" width="250">
+</div>
+#+end_export
+
+* Usage
+Declare to your home configuration for declaritve approach or add to
+~$HOME/.config/guix/channels.scm~.
+
+#+begin_src scheme
+(channel 
+  (name 'tuco)
+  (branch "main")
+  (url "https://codeberg.org/niqc/tuco")
+  (introduction
+   (make-channel-introduction
+    "5728b7a5854267de9ef9f30300d946fbb72f8ea4"
+    (openpgp-fingerprint
+     "EA18 B34E FD42 9D71 B9D5 4D3D CB9A 70FA CE87 C135"))))
+#+end_src
+
 * Note
 tuco is a personal Guix channel maintained for the sole purpose of packaging software that I need
 immediately and urgently for my personal workflow.
