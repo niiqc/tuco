@@ -19,6 +19,7 @@
   #:use-module (gnu packages vulkan)
   #:use-module (gnu packages xdisorg)
   #:use-module (guix build-system copy)
+  #:use-module (guix deprecation)
   #:use-module (guix gexp)
   #:use-module (guix git-download)
   #:use-module ((guix licenses) #:prefix license:)
@@ -29,15 +30,10 @@
             quickemu
             virglrenderer-venus))
 
-;; Required to enable suuport to venus=true and -audiodev pipewire
-(define qemu-pipewire-venus
-  (package
-    (inherit qemu)
-    (name "qemu-pipewire-venus")
-    (inputs
-     (modify-inputs (package-inputs qemu)
-       (replace "virglrenderer" virglrenderer-venus)
-       (prepend pipewire)))))
+;; The pipewire integration and virglrender features has been incorporated to
+;; upstream guix.
+(define-deprecated/public-alias qemu-pipewire-venus
+  (@ (gnu packages virtualization) qemu))
 
 (define quickemu
   (package
@@ -82,7 +78,7 @@
     (inputs (list bash-minimal
                   ovmf-x86-64))
     (propagated-inputs
-     (list qemu-pipewire-venus
+     (list qemu
            cdrtools
            edk2-tools
            spice-gtk))
@@ -95,18 +91,7 @@ requirement for exhaustive configuration options.  You decide what operating
 system you want to run and Quickemu takes care of the rest.")
     (license license:expat)))
 
-;; Enable server render support for use venus
-(define virglrenderer-venus
-  (package
-    (inherit virglrenderer)
-    (name "virglrenderer-venus")
-    (propagated-inputs
-     (modify-inputs (package-inputs virglrenderer)
-       (prepend vulkan-loader vulkan-headers libva libdrm libepoxy)))
-    (arguments
-     (substitute-keyword-arguments (package-arguments virglrenderer)
-       ((#:configure-flags flags #~'())
-        #~(cons* "-Dvenus=true"
-                 "-Dvideo=true"
-                 "-Ddrm-renderers=amdgpu-experimental,msm"
-                 #$flags))))))
+
+;; The venus and drm's integration has been incorporated to upstream guix.
+(define-deprecated/public-alias virglrenderer-venus
+  (@ (gnu packages spice) virglrenderer))
