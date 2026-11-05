@@ -1,16 +1,14 @@
-#+title: tuco
+#+title: tuco a personal guix channel
+#+options: author:nil email:nil creator:nil timestamp:nil
 
 #+begin_export html
 <div align="center">
     <!-- License -->
-    <a href="https://codeberg.org/niqc/tuco/raw/branch/main/LICENSE"><img alt="license" src="https://img.shields.io/badge/License-AGPL_V3-blue.svg?style=for-the-badge"/></a>
-
-    <!-- Issues -->
-    <a href="https://codeberg.org/niqc/tuco/issues"> <img alt="issues" src="https://img.shields.io/badge/dynamic/json?url=https://codeberg.org/api/v1/repos/niqc/org-dynamic-templates&query=$.open_issues_count&suffix=open&style=for-the-badge&label=issues"/></a>
-
+    <a href="https://git.sr.ht/~niqc/tuco/blob/main/LICENSE" target="_blank">
+        <img alt="license" src="https://img.shields.io/badge/License-AGPL_V3-blue.svg?style=for-the-badge"/>
+    </a>
     <hr>
-
-    <img src="tuco.png" width="250">
+    <img src="https://git.sr.ht/~niqc/tuco/blob/main/tuco.png" width="250">
 </div>
 #+end_export
 
@@ -22,7 +20,7 @@ Declare to your home configuration for declaritve approach or add to
 (channel 
   (name 'tuco)
   (branch "main")
-  (url "https://codeberg.org/niqc/tuco")
+  (url "https://git.sr.ht/~niqc/tuco")
   (introduction
    (make-channel-introduction
     "5728b7a5854267de9ef9f30300d946fbb72f8ea4"
@@ -53,3 +51,6 @@ If you still haven't found what you need, you can search using these package sea
 
 - https://search.guix.moe
 - https://toys.whereis.social/
+
+* Mirroring
+The main repo lives at [[https://git.sr.ht/~niqc/tuco][git.sr.ht]] and is mirrored to Codeberg, GitHub.

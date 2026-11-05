@@ -2,5 +2,5 @@
   (version 0)
   (directory "modules")
   (keyring-reference "keyring")
-  (url "https://codeberg.org/niqc/tuco.git")
+  (url "https://git.sr.ht/~niqc/tuco")
   (news-file "NEWS"))
