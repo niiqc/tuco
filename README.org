@@ -1,4 +1,4 @@
-#+title: tuco a personal guix channel
+#+title: tuco
 #+options: author:nil email:nil creator:nil timestamp:nil
 
 #+begin_export html
